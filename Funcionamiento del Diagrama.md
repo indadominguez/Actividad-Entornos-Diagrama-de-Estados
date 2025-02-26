@@ -13,8 +13,8 @@
 
 - Descripción: El sistema verifica la validez de la tarjeta que ha insertado el usuario.
 - Acciones:
- - entry: El cajero lee la tarjeta introducida y valida su autenticidad.
- - do: Si la tarjeta es válida, el sistema solicita el PIN; si es inválida, vuelve a esperar una nueva tarjeta o interacción del usuario.
+  - entry: El cajero lee la tarjeta introducida y valida su autenticidad.
+  - do: Si la tarjeta es válida, el sistema solicita el PIN; si es inválida, vuelve a esperar una nueva tarjeta o interacción del usuario.
 
 ## 3. IntroducirPIN:
 
