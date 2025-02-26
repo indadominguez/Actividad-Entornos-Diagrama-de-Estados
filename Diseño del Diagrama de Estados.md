@@ -1,4 +1,5 @@
 # Código para crear el Diagrama de Estados 
+## Código
 [*] --> EstadoStand_by
 
 EstadoStand_by --> VerificarTarjeta : Insertar tarjeta
@@ -19,6 +20,6 @@ ProcesarOperacion --> MenuOperaciones : Operación completada
 ProcesarOperacion --> EstadoStand_by : Finalizar sesión
 
 ---
-
+## Imagen
 ![image](https://github.com/user-attachments/assets/490f20a7-a24a-407f-a707-41911405f10e)
 
