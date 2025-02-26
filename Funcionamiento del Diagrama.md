@@ -3,18 +3,18 @@
 
 ## 1. EstadoStand_by:
 
-- Descripción: Es el estado inicial y final del sistema. El cajero está inactivo esperando que el usuario realice alguna acción, como insertar la tarjeta.
+- Descripción: Es el estado inicial y final del sistema. El cajero está inactivo esperando que el usuario realice la acción insertar la tarjeta.
 
 - Acciones:
-  - entry: El sistema se encuentra en espera, sin interactuar con el usuario.
-  - do: El sistema permanece inactivo hasta que se realice alguna de las transiciones definidas, como la inserción de la tarjeta.
+  - entry: El sistema se encuentra en espera.
+  - do: El sistema permanece inactivo hasta que se realice insertar tarjeta.
 
 ## 2. VerificarTarjeta:
 
 - Descripción: El sistema verifica la validez de la tarjeta que ha insertado el usuario.
 - Acciones:
   - entry: El cajero lee la tarjeta introducida y valida su autenticidad.
-  - do: Si la tarjeta es válida, el sistema solicita el PIN; si es inválida, vuelve a esperar una nueva tarjeta o interacción del usuario.
+  - do: Si la tarjeta es válida, el sistema solicita el PIN; si es inválida, vuelve a esperar una nueva tarjeta.
 
 ## 3. IntroducirPIN:
 
@@ -27,14 +27,14 @@
 
 - Descripción: Si el usuario introduce un PIN incorrecto tres veces, el sistema bloquea la tarjeta.
 - Acciones:
-  - entry: El sistema bloquea la tarjeta y no permite más intentos de acceso.
-  - do: No se realizan más transiciones desde este estado, salvo que el usuario reinicie el proceso con una tarjeta nueva.
+  - entry: El sistema bloquea la tarjeta.
+  - do: No se realizan más transiciones desde este estado.
    
 ## 5. MenuOperaciones:
 
 - Descripción: El sistema presenta un menú con las opciones de transacciones disponibles después de que el PIN haya sido validado correctamente.
 - Acciones:
-  - entry: El sistema muestra las opciones de transacción (como retirar dinero, consultar saldo, etc.).
+  - entry: El sistema muestra las opciones de transacción.
   - do: El sistema espera que el usuario seleccione una operación para llevar a cabo.
 
 ## 6. ProcesarOperacion:
