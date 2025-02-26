@@ -18,7 +18,7 @@ MenuOperaciones --> EstadoStand_by : Cancelar interacción
 ProcesarOperacion --> MenuOperaciones : Operación completada
 ProcesarOperacion --> EstadoStand_by : Finalizar sesión
 
-
+---
 
 ![image](https://github.com/user-attachments/assets/490f20a7-a24a-407f-a707-41911405f10e)
 
