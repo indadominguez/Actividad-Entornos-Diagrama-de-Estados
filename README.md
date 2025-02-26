@@ -1,4 +1,4 @@
-Descripción:
+## Descripción:
 AVISO: Si se detecta mínimamente el uso de ChatGPT la tarea se dará por no superada. (Forma de expresarse no habituales en el alumno, uso de palabras no conocidas, palabras típicas de chatGPT, etc.). Y ante la duda se tendrá que defender. 
 La actividad consiste en realizar un:
 
