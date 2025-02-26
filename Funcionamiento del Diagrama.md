@@ -6,8 +6,8 @@
 - Descripción: Es el estado inicial y final del sistema. El cajero está inactivo esperando que el usuario realice alguna acción, como insertar la tarjeta.
 
 - Acciones:
- - entry: El sistema se encuentra en espera, sin interactuar con el usuario.
- - do: El sistema permanece inactivo hasta que se realice alguna de las transiciones definidas, como la inserción de la tarjeta.
+  - entry: El sistema se encuentra en espera, sin interactuar con el usuario.
+  - do: El sistema permanece inactivo hasta que se realice alguna de las transiciones definidas, como la inserción de la tarjeta.
 
 ## 2. VerificarTarjeta:
 
