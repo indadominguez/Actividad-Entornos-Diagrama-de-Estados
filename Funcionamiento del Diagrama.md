@@ -49,58 +49,58 @@
 ## Transiciones
 ## 1. EstadoStand_by --> VerificarTarjeta:
 
-Descripción: La transición ocurre cuando el usuario inserta la tarjeta.
-Condición: El cajero detecta la tarjeta y empieza la validación.
+- Descripción: La transición ocurre cuando el usuario inserta la tarjeta.
+- Condición: El cajero detecta la tarjeta y empieza la validación.
 
 ## 2. VerificarTarjeta --> EstadoStand_by:
 
-Descripción: Si la tarjeta es inválida, el sistema vuelve al estado de espera (stand-by).
-Condición: La tarjeta es rechazada (por ejemplo, si no es válida o está caducada).
+- Descripción: Si la tarjeta es inválida, el sistema vuelve al estado de espera (stand-by).
+- Condición: La tarjeta es rechazada (por ejemplo, si no es válida o está caducada).
 
-## 3. VerificarTarjeta --> IntroducirPIN:
+## 3. VerificarTarjeta --> IntroducirPIN: 
 
-Descripción: Si la tarjeta es válida, el sistema solicita al usuario que ingrese su PIN.
+- Descripción: Si la tarjeta es válida, el sistema solicita al usuario que ingrese su PIN.
 
 ## 4. IntroducirPIN --> IntroducirPIN:
 
-Descripción: El sistema permite que el usuario ingrese el PIN varias veces (hasta tres intentos).
-Condición: Si el PIN es incorrecto, el sistema permite reintentar hasta el límite de tres intentos.
+- Descripción: El sistema permite que el usuario ingrese el PIN varias veces (hasta tres intentos).
+- Condición: Si el PIN es incorrecto, el sistema permite reintentar hasta el límite de tres intentos.
 
 ## 5. IntroducirPIN --> TarjetaBloqueada:
 
-Descripción: Si el usuario falla tres veces en el intento de introducir el PIN correctamente, la tarjeta se bloquea.
-Condición: Después de tres intentos incorrectos.
+- Descripción: Si el usuario falla tres veces en el intento de introducir el PIN correctamente, la tarjeta se bloquea.
+- Condición: Después de tres intentos incorrectos.
 
 ## 6. IntroducirPIN --> MenuOperaciones:
 
-Descripción: Si el usuario introduce correctamente el PIN, el sistema muestra el menú de opciones de transacciones.
-Condición: El PIN es correcto.
+- Descripción: Si el usuario introduce correctamente el PIN, el sistema muestra el menú de opciones de transacciones.
+- Condición: El PIN es correcto.
 
 ## 7. IntroducirPIN --> EstadoStand_by:
 
-Descripción: Si el usuario decide cancelar el proceso de autenticación antes de que se alcance el límite de intentos, el sistema vuelve al estado de espera.
-Condición: El usuario cancela la autenticación.
+- Descripción: Si el usuario decide cancelar el proceso de autenticación antes de que se alcance el límite de intentos, el sistema vuelve al estado de espera.
+- Condición: El usuario cancela la autenticación.
 
 ## 8. MenuOperaciones --> ProcesarOperacion:
 
-Descripción: El usuario selecciona una transacción del menú y el sistema procesa la operación.
-Condición: El usuario elige una operación (por ejemplo, retirar dinero).
+- Descripción: El usuario selecciona una transacción del menú y el sistema procesa la operación.
+- Condición: El usuario elige una operación (por ejemplo, retirar dinero).
 
 ## 9. MenuOperaciones --> EstadoStand_by:
 
-Descripción: El usuario decide cancelar la interacción con el cajero antes de realizar cualquier operación.
-Condición: El usuario selecciona la opción de cancelar.
+- Descripción: El usuario decide cancelar la interacción con el cajero antes de realizar cualquier operación.
+- Condición: El usuario selecciona la opción de cancelar.
 
 ## 10. ProcesarOperacion --> MenuOperaciones:
 
-Descripción: Después de que el sistema haya completado una transacción, se devuelve al menú de operaciones para que el usuario elija otra transacción.
-Condición: La transacción se completó con éxito.
+- Descripción: Después de que el sistema haya completado una transacción, se devuelve al menú de operaciones para que el usuario elija otra transacción.
+- Condición: La transacción se completó con éxito.
 
 ## 11. ProcesarOperacion --> EstadoStand_by:
 
-Descripción: Si el usuario decide finalizar la sesión tras completar la operación, el sistema vuelve al estado de espera (stand-by).
-Condición: El usuario elige finalizar la sesión.
+- Descripción: Si el usuario decide finalizar la sesión tras completar la operación, el sistema vuelve al estado de espera (stand-by).
+- Condición: El usuario elige finalizar la sesión.
 
 ## 12. TarjetaBloqueada --> [*]:
 
-Descripción: Cuando la tarjeta se bloquea, la sesión se termina y el cajero vuelve al estado inicial, listo para una nueva interacción con otro usuario.
+- Descripción: Cuando la tarjeta se bloquea, la sesión se termina y el cajero vuelve al estado inicial, listo para una nueva interacción con otro usuario.
